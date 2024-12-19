@@ -37,6 +37,6 @@ Vous avez une question ou souhaitez collaborer ? Je serais ravi d'échanger avec
 - **📧 Email** : [imanatech47@gmail.com](mailto:imanatech47@gmail.com)  
 - **💼 LinkedIn** : [François Nsengimana](https://www.linkedin.com/in/françois-nsengimana)  
 - **YouTube** : [IMANA47](https://www.youtube.com/@IMANA47)
-- **TikTok** : [imana.47](https://www.tiktok.com/@imana.47)  
+- **TikTok** : [imana.47](https://www.tiktok.com/@imana.47?is_from_webapp=1&sender_device=pc)  
 
 N'hésitez pas à me contacter, je suis ouvert à toutes les opportunités et collaborations. À bientôt ! 😊  
