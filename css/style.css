@@ -191,14 +191,16 @@ p {
 
 /* responsive home */
 @media (max-width: 990px) {
-  #home {
+  #home,
+  #about {
     display: flex;
     flex-direction: column;
     height: auto;
     width: 90%;
     padding: 8px;
   }
-  .home-text {
+  .home-text,
+  .about-text {
     font-size: 15px;
     text-align: center;
     line-height: 30px;
@@ -221,9 +223,59 @@ p {
     width: 350px;
     justify-content: center;
   }
+  /* section about */
+  #paragraphe-about {
+    font-size: 20px;
+  }
+  #imageMe2 {
+    width: 390px;
+    height: 390px;
+    justify-content: center;
+  }
+  /* about end */
 }
 /* end section home  */
 
+/* section about */
+#about {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+.about-right img {
+  border-radius: 20px;
+  align-items: center;
+}
+.about-text {
+  font-size: 20px;
+}
+#jobs {
+  margin-top: 13px;
+  color: #f7e704;
+  font-weight: bold;
+}
+#paragraphe-about {
+  margin-top: 8px;
+}
+a .button-about {
+  background-color: transparent;
+  color: #fafafb;
+  border: 2px solid yellow;
+  margin-top: 50px;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+a .button-about:hover {
+  background-color: yellow;
+  color: #0b0b0b;
+  font-weight: bold;
+}
 /* contact section */
 
 /* container utility */
