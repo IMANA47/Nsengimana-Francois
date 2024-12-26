@@ -4,19 +4,149 @@
   box-sizing: border-box;
 }
 body {
+  height: 100vh;
   line-height: 1.5;
   box-sizing: border-box;
   color: rgba(248, 248, 248, 0.938);
   background-color: #000814;
 }
-/* contact section */
-/* background image  */
-#fancy-form {
-  background-color: #000814;
+/* navbar  */
+header {
+  position: relative;
+  background-color: #021633;
+  margin: 20px;
+  padding: 0 2rem;
+  border-radius: 20px;
 }
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  gap: 0.5rem;
+}
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+.navbar .burger-menu-button {
+  color: yellow !important;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+/* button navbar */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+.action-button {
+  background-color: yellow !important;
+  color: #000814;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.action-button:hover {
+  color: #0b0b0b;
+  border: 1px solid yellow;
+}
+.pro {
+  background-color: transparent !important;
+  color: #fafafb;
+  border: 2px solid yellow !important;
+}
+.pro:hover {
+  background-color: yellow;
+  color: #000814;
+  font-weight: bold;
+}
+/* burger menu */
+.burger-menu {
+  display: none;
+  height: 0;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  width: 200px;
+  background-color: #021633af;
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.burger-menu.open {
+  height: 350px;
+}
+.burger-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.divider {
+  height: 1px;
+  background-color: yellow !important;
+  width: 80%;
+  margin-left: auto !important;
+  margin-right: auto;
+  margin-bottom: 1rem !important;
+}
+.burger-menu .action-button {
+  width: 80%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.buttons-burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+/* --responsive navbar */
+@media (max-width: 990px) {
+  header {
+    background: none !important;
+  }
+  .navbar .links,
+  .navbar .action-button {
+    display: none !important;
+  }
+  h5 {
+    display: none !important;
+  }
+  .navbar .burger-menu-button {
+    display: block;
+  }
+  .burger-menu {
+    display: block;
+  }
+}
+/* contact section */
 
 /* container utility */
-#fancy-form .container {
+#contact .container {
   width: 80%;
   margin: auto;
   overflow: hidden;
@@ -115,14 +245,14 @@ form button {
 
 /* media queries */
 @media (max-width: 968px) {
-  #fancy-form .form-sections {
+  #contact .form-sections {
     display: block;
     width: 100%;
     text-align: left;
   }
 
   /* background image  */
-  #fancy-form {
+  #contact {
     background: linear-gradient(
       rgba(245, 243, 39, 0.8) rgba(245, 243, 39, 0.8)
     );
@@ -222,7 +352,7 @@ footer {
   }
 }
 
-#fancy-form,
+#contact,
 .footerContainer {
   margin-bottom: 100px;
 }

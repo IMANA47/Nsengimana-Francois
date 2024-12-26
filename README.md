@@ -18,7 +18,6 @@ Bienvenue sur mon portfolio ! Ce projet a été conçu pour présenter mes comp�
 
 ## 🛠️ Technologies utilisées  
 - **Frontend** : HTML5, CSS3, JavaScript  
-- **Framework** : Angular  
 - **UI/UX** : LUNACY  
 - **Autres outils** : GitHub Pages pour l'hébergement  
 
