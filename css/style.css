@@ -133,10 +133,10 @@ a {
   }
   .navbar .links,
   .navbar .action-button {
-    display: none !important;
+    display: none;
   }
-  h5 {
-    display: none !important;
+  h4 {
+    display: none;
   }
   .navbar .burger-menu-button {
     display: block;
@@ -146,7 +146,7 @@ a {
   }
 }
 @media (max-width: 576px) {
-  h5 {
+  h4 {
     display: none;
   }
   .burger-menu {
