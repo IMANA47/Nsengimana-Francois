@@ -1,3 +1,5 @@
+"use strict";
+
 const burgerMenuButton = document.querySelector(".burger-menu-button");
 const burgerMenuButtonIcon = document.querySelector(".burger-menu-button i");
 const burgerMenu = document.querySelector(".burger-menu");
