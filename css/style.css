@@ -16,7 +16,6 @@ header {
   position: relative;
   background-color: #021633;
   margin: 20px;
-  padding: 0 2rem;
   border-radius: 20px;
   padding: 10px;
 }
@@ -297,9 +296,9 @@ a .button-about:hover {
 }
 .box-contenu {
   background-color: #021633af;
-  width: 600px;
-  height: 300px;
-  margin: 15px;
+  width: 380px;
+  height: 200px;
+  margin: 8px;
   padding: 20px;
   border-radius: 5px;
 }
@@ -429,7 +428,7 @@ a .button-about:hover {
 }
 .box-project {
   background-color: #021633af;
-  width: 330px;
+  width: 370px;
   height: 250px;
   margin: 10px;
   padding: 12px;
