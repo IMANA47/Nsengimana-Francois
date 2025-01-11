@@ -279,58 +279,52 @@ a .button-about:hover {
 }
 
 /* section education */
-#head-section {
+.head-section {
   text-align: center;
   font-size: 40px;
   font-weight: bolder;
   height: 100px;
 }
-#head-section > span {
+.head-section > span {
   color: #f7e704;
 }
 .box-education {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
+  align-content: center;
+  line-height: 25px;
 }
 .box-contenu {
   background-color: #021633af;
-  width: 380px;
-  height: 200px;
+  width: 470px;
+  height: 240px;
   margin: 8px;
   padding: 20px;
   border-radius: 5px;
 }
 .school {
   color: #fafafb;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: bolder;
 }
 .title-formation {
-  font-size: 21px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: lighter;
 }
 .time {
   color: #f7e704;
-  font-size: 19px;
+  font-size: 12px;
+  line-height: 25px;
 }
-.btn-plus-sur-formation {
-  background-color: transparent;
-  color: #fafafb;
-  border: 2px solid yellow;
-  padding: 0.4rem 1.2rem;
-  border-radius: 5px;
-  outline: none;
-  font-size: 0.9rem;
-  font-weight: bold;
-  cursor: pointer;
+.description-formation{
+padding-left: 20px;
+  font-size: 16px;
+  line-height: 22px;
 }
-.btn-plus-sur-formation:hover {
-  background-color: yellow;
-  color: #0b0b0b;
-  font-weight: bold;
-}
+
+
 /* responsive education */
 @media screen and (max-width: 990px) {
   #head-section {
@@ -350,7 +344,7 @@ a .button-about:hover {
   }
   .box-contenu {
     background-color: #021633af;
-    width: 600px;
+    width: 510px;
     height: 300px;
     margin: 13px;
     padding: 28px;
@@ -358,16 +352,16 @@ a .button-about:hover {
   }
   .school {
     color: #fafafb;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: bolder;
   }
   .title-formation {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
   }
   .time {
     color: #f7e704;
-    font-size: 15px;
+    font-size: 12px;
   }
   .btn-plus-sur-formation {
     background-color: transparent;
@@ -392,18 +386,20 @@ a .button-about:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
   margin: 20px;
   padding: 10px;
 }
 .box-contenu-skills {
-  width: 240px;
-  height: 300px;
+  width: 250px;
+  height: 180px;
   margin: 10px;
   border-radius: 10px;
   text-align: center;
-  background-color: #021633;
+
 }
-#head-skills {
+.head-skills {
   background-color: #f7e704;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -411,6 +407,9 @@ a .button-about:hover {
   color: #000814;
   font-size: 20px;
   font-weight: bolder;
+}
+.icon-skills {
+  padding-top: 20px;
 }
 .box-contenu-skills > ul > li {
   padding-top: 3px;
@@ -423,12 +422,14 @@ a .button-about:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+    justify-content: center;
+  align-content: center;
   margin: 2px;
   padding: 10px;
 }
 .box-project {
   background-color: #021633af;
-  width: 370px;
+  width: 470px;
   height: 250px;
   margin: 10px;
   padding: 12px;
@@ -436,7 +437,7 @@ a .button-about:hover {
 }
 .box-project h1 {
   color: white;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bolder;
 }
 .box-project p {
@@ -455,6 +456,11 @@ a .button-about:hover {
   font-size: 0.7rem;
   font-weight: bold;
   cursor: pointer;
+}
+.btn-plus-sur-project:hover {
+  background-color: yellow;
+  color: #0b0b0b;
+  font-weight: bold;
 }
 /* contact section */
 
@@ -526,7 +532,6 @@ form input {
   border: none;
   background-color: yellow;
   color: rgb(8, 8, 8);
-  border: none;
   outline: none;
 }
 
@@ -536,7 +541,6 @@ form textarea {
   border: none;
   background-color: yellow;
   color: rgb(11, 11, 11);
-  border: none;
   outline: none;
 }
 
@@ -648,7 +652,7 @@ footer {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
-  margin: 0px 5px;
+  margin: 2px 5px;
 }
 /* Responsive Design */
 @media (max-width: 700px) {
