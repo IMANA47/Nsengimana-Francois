@@ -304,10 +304,16 @@ a .button-about:hover {
   padding: 20px;
   border-radius: 5px;
 }
+.linke-school{
+    display: flex;
+  flex-wrap: nowrap;
+  
+}
 .school {
   color: #fafafb;
   font-size: 17px;
   font-weight: bolder;
+  margin-left: 2px;
 }
 .title-formation {
   font-size: 15px;
@@ -393,7 +399,7 @@ padding-left: 20px;
 }
 .box-contenu-skills {
   width: 250px;
-  height: 180px;
+  height: 210px;
   margin: 10px;
   border-radius: 10px;
   text-align: center;
