@@ -155,6 +155,12 @@ a {
 }
 /* end navbar */
 
+section{
+  width: 100%;
+  height: 100%;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
 /* section home */
 #home {
   display: flex;
@@ -188,6 +194,7 @@ p {
   padding: 5px;
   color: #0b0b0b;
 }
+
 
 /* responsive home */
 @media (max-width: 990px) {
@@ -225,13 +232,17 @@ p {
     justify-content: center;
   }
   /* section about */
+  about-right-img{
+  width: 20px;
+  }
   #paragraphe-about {
     font-size: 20px;
   }
-  #imageMe2 {
-    width: 390px;
-    height: 390px;
+  main section {
+    flex-direction: column;
+    width: 100%;
     justify-content: center;
+    align-content: center;
   }
   /* about end */
 }
@@ -244,10 +255,6 @@ p {
   justify-content: center;
   padding: 10px;
   margin-top: 20px;
-}
-.about-right img {
-  border-radius: 20px;
-  align-items: center;
 }
 .about-text {
   font-size: 20px;
@@ -411,7 +418,7 @@ a .button-about:hover {
   font-size: 20px;
   font-weight: bolder;
 }
-.icon-skills {
+.icon-skills ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -444,8 +451,8 @@ a .button-about:hover {
 }
 .box-project {
   background-color: #021633af;
-  width: 480px;
-  height: 320px;
+  width: 500px;
+  height: 400px;
   margin: 10px;
   padding: 12px;
   border-radius: 5px;
@@ -461,14 +468,14 @@ a .button-about:hover {
   font-weight: lighter;
 }
 .btn-plus-sur-project {
-  width: 100px;
   background-color: transparent;
   color: #fafafb;
   border: 2px solid yellow;
-  padding: 5px;
+  margin-top: 45px;
+  padding: 0.5rem 1.2rem;
   border-radius: 5px;
   outline: none;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: bold;
   cursor: pointer;
 }
@@ -604,9 +611,11 @@ form button {
 footer {
   background-color: #021633;
   border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .footerContainer {
   width: 100%;
@@ -683,4 +692,12 @@ footer {
     text-align: center;
     margin: 10px;
   }
+}
+
+/*----------------------------------- Responsive Design  desktop  ------------------*/
+@media (min-width: 1440px) {
+main section{
+  flex-direction: row;
+
+}
 }
