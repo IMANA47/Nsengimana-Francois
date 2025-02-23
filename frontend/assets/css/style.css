@@ -7,6 +7,7 @@
   --background-color: #FFFFFF ;
   --text-color: #121212;
 }
+/*
 #theme-toggle {
   background: none;
   font-size: 1.3rem;
@@ -15,6 +16,7 @@
   padding: 0.5rem 1.2rem;
   border: none;
 }
+*/
 
 body {
   height: 100vh;
@@ -23,8 +25,7 @@ body {
   color: rgba(248, 248, 248, 0.938);
   background-color: #010101;
 }
-
-/* navbar  */
+/*-----------------------------------  navbar   start  ------------------*/
 header {
   position: relative;
   background-color: #021633;
@@ -139,43 +140,16 @@ a {
   align-items: center;
   gap: 10px;
 }
-/* --responsive navbar */
-@media (max-width: 990px) {
-  header {
-    background: none;
-  }
-  .navbar .links,
-  .navbar .action-button {
-    display: none;
-  }
-  h4 {
-    display: none;
-  }
-  .navbar .burger-menu-button {
-    display: block;
-  }
-  .burger-menu {
-    display: block;
-  }
-}
-@media (max-width: 576px) {
-  h4 {
-    display: none;
-  }
-  .burger-menu {
-    left: 2rem;
-    width: unset;
-  }
-}
-/* end navbar */
+/*-----------------------------------  navbar   end  ------------------*/
 
+/*-----------------------------------  main  start  ------------------*/
 section{
   width: 100%;
   height: 100%;
   padding-top: 35px;
   padding-bottom: 35px;
 }
-/* section home */
+/* --------------------section home start --------------------*/
 #home {
   display: flex;
   gap: 15px;
@@ -208,61 +182,9 @@ p {
   padding: 5px;
   color: #0b0b0b;
 }
+/*-------------------- end section home -------------------- */
 
-
-/* responsive home */
-@media (max-width: 990px) {
-  #home,
-  #about {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: auto;
-    width: 90%;
-    padding: 8px;
-  }
-  .home-text,
-  .about-text {
-    font-size: 15px;
-    text-align: center;
-    line-height: 30px;
-  }
-  h1 {
-    color: yellow;
-    font-size: 25px;
-    font-weight: bold;
-  }
-  p {
-    font-weight: lighter;
-    font-size: 15px;
-  }
-  .hom-social-icon a i {
-    justify-content: center;
-    gap: 5px;
-    font-size: 20px;
-  }
-  .home-left #image-me {
-    width: 350px;
-    justify-content: center;
-  }
-  /* section about */
-  about-right-img{
-  width: 20px;
-  }
-  #paragraphe-about {
-    font-size: 20px;
-  }
-  main section {
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-content: center;
-  }
-  /* about end */
-}
-/* end section home  */
-
-/* section about */
+/* --------------------section about start --------------------*/
 #about {
   display: flex;
   gap: 25px;
@@ -307,8 +229,9 @@ a .button-about:hover {
   color: #0b0b0b;
   font-weight: bold;
 }
+/*-------------------- section about end --------------------*/
 
-/* section education */
+/* --------------------section education start --------------------*/
 .head-section {
   text-align: center;
   font-size: 40px;
@@ -354,68 +277,13 @@ a .button-about:hover {
   line-height: 25px;
 }
 .description-formation {
-  padding-left: 20px;
+  padding-left: 4px;
   font-size: 16px;
   line-height: 22px;
 }
+/* --------------------section education end-------------------- */
 
-/* responsive education */
-@media screen and (max-width: 990px) {
-  #head-section {
-    text-align: center;
-    font-size: 40px;
-    font-weight: bolder;
-    height: 100px;
-  }
-  #head-section > span {
-    color: #f7e704;
-  }
-  .box-education {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-  }
-  .box-contenu {
-    background-color: #021633af;
-    width: 470px;
-    height: 250px;
-    margin: 10px;
-    padding: 12px;
-    border-radius: 5px;
-  }
-  .school {
-    color: #fafafb;
-    font-size: 16px;
-    font-weight: bolder;
-  }
-  .title-formation {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .time {
-    color: #f7e704;
-    font-size: 12px;
-  }
-  .btn-plus-sur-formation {
-    background-color: transparent;
-    color: #fafafb;
-    border: 2px solid yellow;
-    padding: 0.3rem 1.1rem;
-    border-radius: 5px;
-    outline: none;
-    font-size: 0.9rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .btn-plus-sur-formation:hover {
-    background-color: yellow;
-    color: #0b0b0b;
-    font-weight: bold;
-  }
-}
-/* section skills */
+/* --------------------section skills start--------------------*/
 .box-skills {
   display: flex;
   flex-direction: row;
@@ -461,8 +329,9 @@ a .button-about:hover {
   font-size: 18px;
   line-height: normal;
 }
+/* --------------------section skills end-------------------- */
 
-/* Section project */
+/* --------------------Section project start --------------------*/
 .container-project {
   display: flex;
   flex-direction: row;
@@ -507,7 +376,9 @@ a .button-about:hover {
   color: #0b0b0b;
   font-weight: bold;
 }
-/* contact section */
+/* --------------------Section project end-------------------- */
+
+/* --------------------contact section  start--------------------*/
 
 /* container utility */
 #contact .container {
@@ -604,33 +475,10 @@ form button {
   border-radius: 2px;
   cursor: pointer;
 }
+/* --------------------section contact end --------------------*/
 
-/* media queries */
-@media (max-width: 968px) {
-  #contact .form-sections {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-
-  /* background image  */
-  #contact {
-    background: linear-gradient(
-      rgba(245, 243, 39, 0.8) rgba(245, 243, 39, 0.8)
-    );
-    background-size: cover;
-    background-position: center;
-    height: auto;
-    width: 100%;
-  }
-
-  .form-sections .Form-right {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-}
-
-/* section footer */
+                                /*-----------------------------------  main  end  ------------------*/
+/* --------------------section footer  start--------------------*/
 footer {
   background-color: #021633;
   border-radius: 20px;
@@ -701,7 +549,254 @@ footer {
   font-weight: 400;
   margin: 2px 5px;
 }
-/* Responsive Design */
+/* --------------------section footer  end ------------------- */
+
+/*----------------------------------- Responsive Design  mobile start  --------------------------------------*/
+/* --responsive navbar */
+@media (max-width: 990px) {
+  /* -- navbar */
+  header {
+    background: none;
+  }
+  .navbar .links,
+  .navbar .action-button {
+    display: none;
+  }
+  h4 {
+    display: none;
+  }
+  .navbar .burger-menu-button {
+    display: block;
+  }
+  .burger-menu {
+    display: block;
+  }
+  /* home */
+  
+}
+@media (max-width: 576px) {
+  h4 {
+    display: none;
+  }
+  .burger-menu {
+    left: 2rem;
+    width: unset;
+  }
+}
+
+/* responsive home */
+@media (max-width: 990px) {
+  /*  home */
+  #home .home-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 90%;
+    margin: 5% 5%;
+  }
+  .home-right{
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 95%;
+    align-content: center;
+    text-align: center;
+  }
+  .home-text{
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+    padding: 10px
+  }
+ .home-text, h1 {
+    color: yellow;
+    font-size: 25px;
+    font-weight: bold;
+  }
+   .home-text, p {
+    font-weight: lighter;
+    font-size: 15px;
+  }
+  .hom-social-icon a i {
+    justify-content: center;
+    gap: 5px;
+    font-size: 20px;
+  }
+  .home-left #image-me {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+  /* section about */
+  #about .about-right-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 90%;
+    margin: 5% 5%;
+  }
+  .about-left{
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 95%;
+    align-content: center;
+  }
+  .about-text{
+   width: 90%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: block;
+    margin: 5% 5%;
+  }
+  main section {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+  /* about end */
+}
+/* responsive education */
+@media screen and (max-width: 990px) {
+/* responsive education */
+  #head-section {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    height: 100px;
+  }
+  #head-section > span {
+    color: #f7e704;
+  }
+  .box-education {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    height: auto;
+  }
+  .box-contenu {
+    display: block;
+    background-color: #021633af;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    width: 90%;
+    height: auto;
+  }  
+  .school  .titre-projet{
+    color: #0b0bf2;
+    font-size: 70%;
+    font-weight: bolder;
+    line-height: 15px;
+    align-content: center;
+    text-align: center;
+  }
+  .title-formation {
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 15px;
+  }
+  .time {
+    color: #f7e704;
+    font-size: 0.7rem;
+  }
+  .description-formation{
+    font-size: 0.8rem;
+    margin-top: 6px;
+    font-weight: bold;
+    line-height: 20px;
+    align-content: center;
+  }
+  .btn-plus-sur-formation {
+    background-color: transparent;
+    color: #fafafb;
+    border: 2px solid yellow;
+    padding: 0.3rem 1.1rem;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .btn-plus-sur-formation:hover {
+    background-color: yellow;
+    color: #0b0b0b;
+    font-weight: bold;
+  }
+  /* responsive project */
+    .container-project {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    height: auto;
+  }
+  .box-project {
+    display: block;
+    background-color: #021633af;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+  }
+  .icon-project{
+     width: 100%;
+    height: auto;
+  }
+  .titre-projet{
+    color: #0b0bf2;
+    font-size: 70%;
+    font-weight: bolder;
+    line-height: 15px;
+  }
+  img{
+  width:25px;
+  height: 25px;}
+}
+
+/* media queries */
+@media (max-width: 968px) {
+  #contact .form-sections {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* background image  */
+  #contact {
+    background: linear-gradient(
+      rgba(245, 243, 39, 0.8) rgba(245, 243, 39, 0.8)
+    );
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: 100%;
+  }
+
+  .form-sections .Form-right {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Responsive Design  footer*/
 @media (max-width: 700px) {
   footer {
     margin-left: 10px;
@@ -716,6 +811,8 @@ footer {
     margin: 10px;
   }
 }
+/*----------------------------------- Responsive Design  mobile end  ------------------*/
+
 
 /*----------------------------------- Responsive Design  desktop  ------------------*/
 @media (min-width: 1440px) {
