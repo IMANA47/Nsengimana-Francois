@@ -669,7 +669,38 @@ footer {
   /* about end */
 }
 /* responsive education */
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 700px) {
+  #skills{
+   width: 100%;
+  }
+   .box-skills{
+     gap: 15px;
+     /*border: 2px solid red;*/
+     justify-content: center;
+  }
+
+  .box-contenu-skills{
+  border: 4px solid red;
+  margin: 20px;
+  }
+ .icon-skills{
+  display: block;
+   flex-direction: row;
+   flex-wrap: wrap;
+  width: auto;
+  margin: 20px;
+   /*border: 4px solid red;*/
+  }
+  .icon-skills ul li img{
+    width: 25px;
+    height: 25px;
+    
+  }
+  .icon-skills ul li{
+    font-size: 0.8rem;
+    
+  }
+  
 /* responsive education */
   #head-section {
     text-align: center;
@@ -766,7 +797,7 @@ footer {
     font-weight: bolder;
     line-height: 15px;
   }
-  img{
+  .icon-project img{
   width:25px;
   height: 25px;}
 }
