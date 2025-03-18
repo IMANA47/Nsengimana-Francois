@@ -1,5 +1,5 @@
 :root {
-    --blue: #021633;
+    --blue: #02006A;
     --yellow-hover: #ffff00;
     --light-grey: #D8D8D8;
     --white: #FFFFFF;
@@ -13,12 +13,23 @@
     box-sizing: border-box;
     list-style: none; 
 }
+*, *::after, *::before{
+    box-sizing: inherit;
+} 
 
-body {
-    height: 100vh;
+body{
     line-height: 1.5;
     color: var(--white);
     background-color: var(--black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+
 }
 
 /*-----------------------------------  navbar   start  ------------------*/
@@ -288,7 +299,7 @@ a .button-about:hover {
 }
 
 .box-contenu {
-    background-color: #021633af;
+        background-color: #02006A;
     width: 450px;
     height: 150px;
     margin: 10px;
@@ -349,7 +360,7 @@ a .button-about:hover {
 .box-contenu-skills {
     width: 1312px;
     height: 300px;
-    background: #021633;
+        background-color: #02006A;
     margin: 10px;
     border-radius: 10px;
     text-align: center;
@@ -408,11 +419,11 @@ a .button-about:hover {
     align-content: center;
     margin: 2px;
     padding: 10px;
-  background-color: aqua;
+
 }
 
 .box-project {
-    background-color: #021633af;
+    background-color: #02006A;
     width: 490px;
     height: 250px;
     margin: 5px;
@@ -582,7 +593,7 @@ form button {
 /*-----------------------------------  main  end  ------------------*/
 /* --------------------section footer  start--------------------*/
 footer {
-    background-color: #021633;
+background-color: var(--blue);
     border-radius: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -646,7 +657,7 @@ footer {
 }
 
 .footerBottom p {
-    background-color: #021633;
+background-color: var(--blue);
     padding: 5px;
     text-align: center;
 }
@@ -659,17 +670,18 @@ footer {
     opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 400;
+    font-weight: bold;
     margin: 2px 5px;
 }
 
 /* --------------------section footer  end ------------------- */
 
-/*----------------------------------- Responsive Design  mobile start  --------------------------------------*/
-/* --responsive navbar */
-@media (max-width: 990px) {
-
-    /* -- navbar */
+@media screen and (min-width: 300px){
+    .wrapper{
+        width: 370px;
+        align-items: center;
+    }
+    /*navbar*/
     header {
         background: none;
     }
@@ -690,12 +702,6 @@ footer {
     .burger-menu {
         display: block;
     }
-
-    /* home */
-
-}
-
-@media (max-width: 576px) {
     h4 {
         display: none;
     }
@@ -704,109 +710,87 @@ footer {
         left: 2rem;
         width: unset;
     }
-}
-
-/* responsive home */
-@media (max-width: 990px) {
-
-    /*  home */
-    #home .home-left {
+    /*section home*/
+    #home{
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        height: auto;
-        width: 90%;
-        margin: 5% 5%;
-    }
-
-    .home-right {
-        display: block;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        height: auto;
-        width: 95%;
-        align-content: center;
-        text-align: center;
-    }
-
-    .home-text {
-        font-size: 15px;
-        text-align: center;
-        line-height: 30px;
-        padding: 10px
-    }
-
-    .home-text,
-    h1 {
-        color: yellow;
-        font-size: 25px;
-        font-weight: bold;
-    }
-
-    .home-text,
-    p {
-        font-weight: lighter;
-        font-size: 15px;
-    }
-
-    .hom-social-icon a i {
-        justify-content: center;
-        gap: 5px;
-        font-size: 20px;
-    }
-
-    .home-left #image-me {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-content: center;
-    }
-
-    /* section about */
-    #about .about-right-img {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        height: auto;
-        width: 90%;
-        margin: 5% 5%;
-    }
-
-    .about-left {
-        display: block;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        height: auto;
-        width: 95%;
-        align-content: center;
-    }
-
-    .about-text {
-        width: 90%;
-        height: auto;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        display: block;
-        margin: 5% 5%;
-    }
-
-    main section {
         flex-direction: column;
+    }
+    .home-right .home-text{
+        line-height: normal;
+    }
+    .home-right .hom-social-icon{
+        margin-top: 20px;
+    }
+    .home-left img{
+        width: 90%;
+        margin: 10px 20px;
+    
+    }
+        /*section  about*/
+    #about{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 90%;
+        height: auto;
+        text-align: center;
+    }
+    .about-right img{
+        width: 90%;
+        margin: 10px 20px; 
+    }
+    /*skills*/
+    .box-skills{
         width: 100%;
-        justify-content: center;
-        align-content: center;
+        height: auto;
+    }
+    .box-contenu-skills{
+         width: 90%; 
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 20px; }
+    }
+@media screen and (min-width: 567px){
+    .wrapper{
+        width: 540px;
+        background-color: chartreuse;
     }
 
-    /* about end */
-}
 
-/* responsive education */
-@media screen and (max-width: 700px) {
+}
+@media screen and (min-width: 768px) {
+    .wrapper{
+        width: 720px;
+    }
+    
+        header {
+        background: none;
+    }
+
+    .navbar .links,
+    .navbar .action-button {
+        display: none;
+    }
+
+    h4 {
+        display: none;
+    }
+
+    .navbar .burger-menu-button {
+        display: block;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+    h4 {
+        display: none;
+    }
+
+    .burger-menu {
+        left: 2rem;
+        width: unset;
+    }
     #skills {
         width: 100%;
         height: auto;
@@ -954,11 +938,140 @@ footer {
         width: 25px;
         height: 25px;
     }
-}
+    footer {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
-/* media queries */
-@media (max-width: 968px) {
-    #contact .form-sections {
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+}
+@media screen and (min-width: 992px) {
+    .wrapper{
+        width: 960px;
+    }
+    /* -- navbar */
+    header {
+        background: none;
+    }
+
+    .navbar .links,
+    .navbar .action-button {
+        display: none;
+    }
+
+    h4 {
+        display: none;
+    }
+
+    .navbar .burger-menu-button {
+        display: block;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+#home .home-left {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+        width: 90%;
+        margin: 5% 5%;
+    }
+
+    .home-right {
+        display: block;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+        width: 95%;
+        align-content: center;
+        text-align: center;
+    }
+
+    .home-text {
+        font-size: 15px;
+        text-align: center;
+        line-height: 30px;
+        padding: 10px
+    }
+
+    .home-text,
+    h1 {
+        color: yellow;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .home-text,
+    p {
+        font-weight: lighter;
+        font-size: 15px;
+    }
+
+    .hom-social-icon a i {
+        justify-content: center;
+        gap: 5px;
+        font-size: 20px;
+    }
+
+    .home-left #image-me {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+
+    /* section about */
+    #about .about-right-img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+        width: 90%;
+        margin: 5% 5%;
+    }
+
+    .about-left {
+        display: block;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+        width: 95%;
+        align-content: center;
+    }
+
+    .about-text {
+        width: 90%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        display: block;
+        margin: 5% 5%;
+    }
+
+    main section {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+    
+       #contact .form-sections {
         display: block;
         width: 100%;
         text-align: left;
@@ -977,33 +1090,15 @@ footer {
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+    
 }
-
-/* Responsive Design  footer*/
-@media (max-width: 700px) {
-    footer {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .footerNav ul {
-        flex-direction: column;
-    }
-
-    .footerNav ul li {
-        width: 100%;
-        text-align: center;
-        margin: 10px;
+@media screen and (min-width: 1200px) {
+    .wrapper{
+        width: 1140px;
     }
 }
-
-/*----------------------------------- Responsive Design  mobile end  ------------------*/
-
-
-/*----------------------------------- Responsive Design  desktop  ------------------*/
-@media (min-width: 1440px) {
-    main section {
-        flex-direction: row;
-
+@media screen and (min-width: 1400px) {
+    .wrapper{
+        width: 1320px;
     }
 }

@@ -1,4 +1,4 @@
-# 🌟 Portfolio Personnel - [NSENGIMANA François]
+# Portfolio Personnel - [NSENGIMANA François]
 
 Bienvenue sur mon portfolio ! Ce projet a été conçu pour présenter mes compétences, mes projets, et mon parcours en tant que développeur Full Stack.
 
