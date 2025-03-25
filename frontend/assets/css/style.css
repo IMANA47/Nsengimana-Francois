@@ -208,7 +208,11 @@ p {
     flex-direction: row;
     border-radius: 15px;
 }
+#imageMe2{
+  object-fit: cover;
+   border-radius: 10px;
 
+}
 #jobs {
     margin-top: 13px;
     color: #f7e704;

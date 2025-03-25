@@ -12,32 +12,22 @@ burgerMenuButton.onclick = function () {
     : "fa-solid fa-bars";
 };
 
-//dark mode
 
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
+// Tableau des images locales (en utilisant le chemin relatif)
+const images = [
+    'frontend/assets/images/face/me2.jpg', // Image 1
+    'frontend/assets/images/face/devops.jpg', // Image 3
+    'frontend/assets/images/face/hacking.jpg'
+];
 
-// Vérifie le mode sauvegardé dans le localStorage
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-  body.setAttribute('data-theme', savedTheme);
-  updateButtonText(savedTheme);
+// Fonction pour changer l'image aléatoirement
+function changerImage() {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const randomImage = images[randomIndex];
+
+    // Modifier la source de l'image affichée
+    document.getElementById('imageMe2').src = randomImage;
 }
 
-// Fonction pour basculer entre les modes
-themeToggle.addEventListener('click', () => {
-  const currentTheme = body.getAttribute('data-theme');
-  if (currentTheme === 'dark') {
-    body.setAttribute('data-theme', 'light');
-    localStorage.setItem('theme', 'light');
-  } else {
-    body.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-  }
-  updateButtonText(body.getAttribute('data-theme'));
-});
-
-// Fonction pour mettre à jour le texte du bouton
-function updateButtonText(theme) {
-  themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-}
+// Changer l'image toutes les 3 secondes (3000 ms)
+setInterval(changerImage, 3000);
