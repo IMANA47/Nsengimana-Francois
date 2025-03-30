@@ -347,7 +347,9 @@ padding-top:8px;
   display: flex;
   align-items: center;
 }
-
+#school-imb{
+  font-size: 15px;
+}
 .school {
     color: #fafafb;
     font-size: 17px;
@@ -363,8 +365,8 @@ padding-top:8px;
 
 .time {
     color: #fff505;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 2px;
 }
 
 .description-formation {
@@ -408,10 +410,11 @@ padding-top:8px;
     font-weight: bolder;
 }
 
-.box-project p {
+.box-project  .detailes-projet {
     color: white;
     font-size: 16px;
     font-weight: lighter;
+  margin: 10px;
 }
 
 .box-project ul {
@@ -433,7 +436,7 @@ padding-top:8px;
     background-color: transparent;
     color: #fafafb;
     border: 2px solid yellow;
-    margin-top: 20px;
+    margin: 10px;
     padding: 0.5rem 1.2rem;
     border-radius: 5px;
     outline: none;
@@ -601,8 +604,14 @@ background-color: var(--blue);
     display: flex;
     justify-content: center;
     list-style-type: none;
+    gap: none;
+    padding: 0;
+    margin: 20px 20px;
 }
-
+  .footerNav ul li {
+    width: 10%;
+    margin: 10px;
+  }
 .footerNav ul li a {
     color: white;
     margin: 20px;
@@ -674,6 +683,9 @@ background-color: var(--blue);
   .about-right{
     display: none;
   }
+  #school-imb{
+  font-size: 15px;
+}
   
     /*  section contact*/    
     #contact .form-sections {
@@ -744,7 +756,7 @@ background-color: var(--blue);
   .about-right{
     display: flex;
   }
-    
+     /*section contact*/
   #contact .form-sections {
     display: flex;
       flex-direction: row;
@@ -795,6 +807,18 @@ background-color: var(--blue);
   .burger-menu {
     display: block;
   }
+    /*section projet*/
+ #project .container-project {
+    display: flex;
+      flex-direction: row;
+    width: 100%;
+  }
+  /*section education*/
+ #education .box-education {
+    display: flex;
+      flex-direction: row;
+    width: 100%;
+  }
     /*section contact*/
  #contact .form-sections {
     display: flex;
@@ -802,6 +826,15 @@ background-color: var(--blue);
     width: 100%;
      justify-content: space-between;
     text-align: left;
+  }
+  .footerNav ul {
+    gap: none;
+    padding: 0;
+    margin: 20px 20px;
+}
+  .footerNav ul li {
+    width: 10%;
+    margin: 10px;
   }
 }
 @media screen and (min-width: 1400px) {
