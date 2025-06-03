@@ -455,104 +455,6 @@ padding-top:8px;
 
 
 
-/* --------------------contact section  start--------------------*/
-
-/* container utility */
-#contact .container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-}
-
-/* main div */
-.form-sections {
-  margin-top: 5rem;
-  display: grid;
-  grid-gap: 5rem;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-/* Form-left styling */
-.Form-left h1 {
-  color: #fff;
-  padding: 0;
-  margin: 0;
-}
-
-.Form-left h4 {
-  padding: 0;
-  margin: 0;
-  color: rgb(243, 235, 235);
-}
-.line {
-  border-bottom: 2px solid yellow;
-  width: 8%;
-  margin-left: 0;
-}
-.Form-left span {
-  color: rgb(187, 182, 182);
-  font-weight: bold;
-}
-.Form-left a {
-  text-decoration: none;
-}
-
-.Form-left hr {
-  width: 25rem;
-  margin-left: 0;
-  border: 1px solid rgba(250, 232, 6, 0.8);
-}
-
-/* Form Right Styling */
-.Form-right h1 {
-  color: #fff;
-  padding: 0;
-  margin: 0;
-}
-
-form {
-  padding-top: 2rem;
-}
-
-form h5 {
-  padding: 0;
-  margin: 0;
-  color: rgb(228, 218, 218);
-}
-form input {
-  padding: 0.6rem;
-  width: 27rem;
-  border: none;
-  background-color: yellow;
-  color: rgb(8, 8, 8);
-  outline: none;
-}
-
-form textarea {
-  padding: 0.6rem;
-  width: 27rem;
-  border: none;
-  background-color: yellow;
-  color: rgb(11, 11, 11);
-  outline: none;
-}
-
-form button {
-  width: 9rem;
-  background: yellow;
-  padding: 5px;
-  outline: none;
-  border-color: transparent;
-  color: black;
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-align: center;
-  margin-top: 0.9rem;
-  border-radius: 2px;
-  cursor: pointer;
-}
-/* --------------------section contact end --------------------*/
 
 /* --------------------section footer  start--------------------*/
 footer {
@@ -687,13 +589,6 @@ background-color: var(--blue);
   font-size: 15px;
 }
   
-    /*  section contact*/    
-    #contact .form-sections {
-    display: flex;
-          flex-direction: column;
-    width: 100%;
-    text-align: left;
-  }
       .footerNav ul {
     flex-direction: column;
   }
@@ -756,29 +651,7 @@ background-color: var(--blue);
   .about-right{
     display: flex;
   }
-     /*section contact*/
-  #contact .form-sections {
-    display: flex;
-      flex-direction: row;
-    width: 100%;
-    text-align: left;
-  }
-
-  /* background image  */
-  #contact {
-    background: linear-gradient(
-      rgba(245, 243, 39, 0.8) rgba(245, 243, 39, 0.8)
-    );
-    background-size: cover;
-    background-position: center;
-    height: auto;
-    width: 100%;
-  }
-
-  .form-sections .Form-right {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }    
+  
 
 }
 @media screen and (min-width: 1200px) {
@@ -819,14 +692,7 @@ background-color: var(--blue);
       flex-direction: row;
     width: 100%;
   }
-    /*section contact*/
- #contact .form-sections {
-    display: flex;
-      flex-direction: row;
-    width: 100%;
-     justify-content: space-between;
-    text-align: left;
-  }
+ 
   .footerNav ul {
     gap: none;
     padding: 0;
