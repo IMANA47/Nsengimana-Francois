@@ -297,8 +297,8 @@ padding-top:8px;
     flex-wrap: wrap;
   justify-content: center;
     margin: 2px 2px;
-  padding: 10px 20px;
-    gap: 10px;
+  padding: 5px 5px;
+    gap: 5px;
 } 
 
 .icon-skills li {
@@ -306,7 +306,7 @@ padding-top:8px;
   flex-direction: column;
     gap: 0.3rem;
     align-items: center;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .box-contenu-skills > ul > li {
@@ -419,6 +419,8 @@ padding-top:8px;
 
 .box-project ul {
     display: flex;
+        flex-direction: row;
+    flex-wrap: wrap;
     gap: 8px;
     margin: 5px;
   padding: 0;
@@ -615,7 +617,7 @@ background-color: var(--blue);
   #school-imb{
   font-size: 15px;
 }
-  
+
       .footerNav ul {
     flex-direction: column;
   }
@@ -634,8 +636,7 @@ background-color: var(--blue);
     color: #0b0b0b;
     font-weight: bold;
 }
-     
-
+    
   .footerNav ul {
     flex-direction: row;
   }
