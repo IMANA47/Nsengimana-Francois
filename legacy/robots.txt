@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://imana47.github.io/Nsengimana-Francois/legacy/sitemap.xml
+

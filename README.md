@@ -3,7 +3,7 @@
 Bienvenue sur mon portfolio ! Ce projet a été conçu pour présenter mes compétences, mes projets, et mon parcours en tant que Analyste Concepteur | Développeur Full Stack.
 
 ## 🌐 Accès au Portfolio  
-👉 [Visitez mon portfolio en ligne ici](https://imana47.github.io/Nsengimana-François/)  
+👉 [Visitez mon portfolio en ligne ici](https://imana47.github.io/Nsengimana-François/legacy/)  
 
 ---
 
