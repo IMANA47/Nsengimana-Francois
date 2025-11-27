@@ -3,3 +3,5 @@ Allow: /
 
 Sitemap: https://imana47.github.io/Nsengimana-Francois/sitemap.xml
 
+Sitemap: https://imana47.github.io/Nsengimana-Francois/legacy/sitemap.xml
+
