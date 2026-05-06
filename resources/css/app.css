@@ -1,0 +1,65 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+    --brand-black: #000000;
+    --brand-gold: #ffd700;
+    --brand-white: #ffffff;
+}
+
+body {
+    background-color: var(--brand-black);
+    color: var(--brand-white);
+}
+
+.text-brand {
+    color: var(--brand-gold);
+}
+
+.btn-brand {
+    background-color: var(--brand-gold);
+    border-color: var(--brand-gold);
+    color: var(--brand-black);
+    font-weight: 600;
+}
+
+.btn-brand:hover {
+    background-color: #e5c200;
+    border-color: #e5c200;
+    color: var(--brand-black);
+}
+
+.section-block {
+    padding: 5rem 0;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.floating-whatsapp {
+    position: fixed;
+    right: 24px;
+    bottom: 20px;
+    z-index: 1060;
+    animation: pulse 1.8s infinite;
+}
+
+.floating-chat {
+    position: fixed;
+    right: 24px;
+    bottom: 90px;
+    z-index: 1060;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+}
