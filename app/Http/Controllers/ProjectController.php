@@ -22,14 +22,25 @@ class ProjectController extends Controller
             'stack' => ['required', 'string', 'max:255'],
             'github_url' => ['nullable', 'url'],
             'demo_url' => ['nullable', 'url'],
-            'image' => ['nullable', 'image', 'max:2048'],
+            'image' => ['nullable', 'file', 'max:2048'],
             'is_featured' => ['nullable', 'boolean'],
         ]);
+        
+        // Validate image extension manually
+        if ($request->hasFile('image')) {
+            $allowedImageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+            $imageExtension = strtolower($request->file('image')->getClientOriginalExtension());
+            if (!in_array($imageExtension, $allowedImageExtensions)) {
+                return back()->withErrors(['image' => "L'image doit être un fichier jpg, jpeg, png, gif ou webp."])->withInput();
+            }
+        }
 
         $data['slug'] = Str::slug($data['title']) . '-' . now()->timestamp;
         $data['is_featured'] = $request->boolean('is_featured');
         if ($request->hasFile('image')) {
-            $data['image_path'] = $request->file('image')->store('projects', 'public');
+            $fileName = uniqid() . '_' . $request->file('image')->getClientOriginalName();
+            $request->file('image')->move(public_path('storage/projects'), $fileName);
+            $data['image_path'] = 'projects/' . $fileName;
         }
         unset($data['image']);
 
@@ -45,12 +56,23 @@ class ProjectController extends Controller
             'stack' => ['required', 'string', 'max:255'],
             'github_url' => ['nullable', 'url'],
             'demo_url' => ['nullable', 'url'],
-            'image' => ['nullable', 'image', 'max:2048'],
+            'image' => ['nullable', 'file', 'max:2048'],
             'is_featured' => ['nullable', 'boolean'],
         ]);
+        
+        // Validate image extension manually
+        if ($request->hasFile('image')) {
+            $allowedImageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+            $imageExtension = strtolower($request->file('image')->getClientOriginalExtension());
+            if (!in_array($imageExtension, $allowedImageExtensions)) {
+                return back()->withErrors(['image' => "L'image doit être un fichier jpg, jpeg, png, gif ou webp."])->withInput();
+            }
+        }
 
         if ($request->hasFile('image')) {
-            $data['image_path'] = $request->file('image')->store('projects', 'public');
+            $fileName = uniqid() . '_' . $request->file('image')->getClientOriginalName();
+            $request->file('image')->move(public_path('storage/projects'), $fileName);
+            $data['image_path'] = 'projects/' . $fileName;
         }
         $data['is_featured'] = $request->boolean('is_featured');
         unset($data['image']);

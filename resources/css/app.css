@@ -1,41 +1,69 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 :root {
+    /* Strict black/white/yellow color scheme */
     --brand-black: #000000;
-    --brand-gold: #ffd700;
-    --brand-white: #ffffff;
+    --brand-dark: #111111;
+    --brand-yellow: #FFD700;
+    --brand-yellow-light: #FFED4A;
+    --brand-white: #FFFFFF;
+    --brand-gray: #CCCCCC;
 }
 
 body {
     background-color: var(--brand-black);
     color: var(--brand-white);
+    line-height: 1.6;
 }
 
 .text-brand {
-    color: var(--brand-gold);
+    color: var(--brand-yellow);
+}
+
+.bg-brand {
+    background-color: var(--brand-yellow);
+}
+
+.border-brand {
+    border-color: var(--brand-yellow);
 }
 
 .btn-brand {
-    background-color: var(--brand-gold);
-    border-color: var(--brand-gold);
+    background-color: var(--brand-yellow);
+    border-color: var(--brand-yellow);
     color: var(--brand-black);
     font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
 }
 
 .btn-brand:hover {
-    background-color: #e5c200;
-    border-color: #e5c200;
+    background-color: var(--brand-yellow-light);
+    border-color: var(--brand-yellow-light);
     color: var(--brand-black);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.btn-brand:focus {
+    background-color: var(--brand-yellow-light);
+    border-color: var(--brand-yellow-light);
+    color: var(--brand-black);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
 }
 
 .section-block {
-    padding: 5rem 0;
+    padding: 6rem 0;
+}
+
+.section-block:nth-child(even) {
+    background-color: var(--brand-dark);
 }
 
 .reveal {
     opacity: 0;
-    transform: translateY(22px);
-    transition: opacity 0.45s ease, transform 0.45s ease;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .reveal.show {
@@ -43,12 +71,110 @@ body {
     transform: translateY(0);
 }
 
+/* Project card improvements */
+.project-card {
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--brand-yellow);
+}
+
+.project-image {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+/* Certificate card improvements */
+.certificate-card {
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--brand-yellow);
+}
+
+/* Service card improvements */
+.service-card {
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--brand-yellow);
+}
+
+/* Navbar improvements */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    border-bottom: 2px solid var(--brand-yellow);
+}
+
+.nav-link {
+    color: var(--brand-white) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--brand-yellow) !important;
+}
+
+/* Form improvements */
+.form-control {
+    background-color: var(--brand-dark);
+    border: 1px solid #333;
+    color: var(--brand-white);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--brand-dark);
+    border-color: var(--brand-yellow);
+    color: var(--brand-white);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+}
+
+.form-control::placeholder {
+    color: var(--brand-gray);
+}
+
+/* Table improvements */
+.table {
+    background-color: var(--brand-dark);
+    color: var(--brand-white);
+}
+
+.table-dark {
+    --bs-table-bg: var(--brand-dark);
+    --bs-table-color: var(--brand-white);
+}
+
+/* Floating buttons */
 .floating-whatsapp {
     position: fixed;
     right: 24px;
     bottom: 20px;
     z-index: 1060;
-    animation: pulse 1.8s infinite;
+    animation: pulse 2s infinite;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
 }
 
 .floating-chat {
@@ -56,10 +182,47 @@ body {
     right: 24px;
     bottom: 90px;
     z-index: 1060;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.07); }
-    100% { transform: scale(1); }
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+    50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
+}
+
+/* Accessibility improvements */
+:focus-visible {
+    outline: 2px solid var(--brand-yellow);
+    outline-offset: 2px;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Card improvements */
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Badge improvements */
+.badge {
+    padding: 0.5em 0.75em;
+    font-weight: 500;
 }

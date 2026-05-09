@@ -20,14 +20,36 @@ class CertificateController extends Controller
             'organization' => ['required', 'string', 'max:180'],
             'issued_at' => ['nullable', 'date'],
             'verification_url' => ['nullable', 'url'],
-            'image' => ['nullable', 'image', 'max:2048'],
-            'pdf' => ['nullable', 'file', 'mimes:pdf', 'max:4096'],
+            'image' => ['nullable', 'file', 'max:2048'],
+            'pdf' => ['nullable', 'file', 'max:4096'],
         ]);
+        
+        // Validate image extension manually
         if ($request->hasFile('image')) {
-            $data['image_path'] = $request->file('image')->store('certificates', 'public');
+            $allowedImageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+            $imageExtension = strtolower($request->file('image')->getClientOriginalExtension());
+            if (!in_array($imageExtension, $allowedImageExtensions)) {
+                return back()->withErrors(['image' => "L'image doit être un fichier jpg, jpeg, png, gif ou webp."])->withInput();
+            }
+        }
+        
+        // Validate pdf extension manually
+        if ($request->hasFile('pdf')) {
+            $allowedPdfExtensions = ['pdf'];
+            $pdfExtension = strtolower($request->file('pdf')->getClientOriginalExtension());
+            if (!in_array($pdfExtension, $allowedPdfExtensions)) {
+                return back()->withErrors(['pdf' => 'Le fichier doit être un PDF.'])->withInput();
+            }
+        }
+        if ($request->hasFile('image')) {
+            $fileName = uniqid() . '_' . $request->file('image')->getClientOriginalName();
+            $request->file('image')->move(public_path('storage/certificates'), $fileName);
+            $data['image_path'] = 'certificates/' . $fileName;
         }
         if ($request->hasFile('pdf')) {
-            $data['file_path'] = $request->file('pdf')->store('certificates', 'public');
+            $fileName = uniqid() . '_' . $request->file('pdf')->getClientOriginalName();
+            $request->file('pdf')->move(public_path('storage/certificates'), $fileName);
+            $data['file_path'] = 'certificates/' . $fileName;
         }
         unset($data['image'], $data['pdf']);
 
@@ -42,14 +64,36 @@ class CertificateController extends Controller
             'organization' => ['required', 'string', 'max:180'],
             'issued_at' => ['nullable', 'date'],
             'verification_url' => ['nullable', 'url'],
-            'image' => ['nullable', 'image', 'max:2048'],
-            'pdf' => ['nullable', 'file', 'mimes:pdf', 'max:4096'],
+            'image' => ['nullable', 'file', 'max:2048'],
+            'pdf' => ['nullable', 'file', 'max:4096'],
         ]);
+        
+        // Validate image extension manually
         if ($request->hasFile('image')) {
-            $data['image_path'] = $request->file('image')->store('certificates', 'public');
+            $allowedImageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+            $imageExtension = strtolower($request->file('image')->getClientOriginalExtension());
+            if (!in_array($imageExtension, $allowedImageExtensions)) {
+                return back()->withErrors(['image' => 'L\'image doit être un fichier jpg, jpeg, png, gif ou webp.'])->withInput();
+            }
+        }
+        
+        // Validate pdf extension manually
+        if ($request->hasFile('pdf')) {
+            $allowedPdfExtensions = ['pdf'];
+            $pdfExtension = strtolower($request->file('pdf')->getClientOriginalExtension());
+            if (!in_array($pdfExtension, $allowedPdfExtensions)) {
+                return back()->withErrors(['pdf' => 'Le fichier doit être un PDF.'])->withInput();
+            }
+        }
+        if ($request->hasFile('image')) {
+            $fileName = uniqid() . '_' . $request->file('image')->getClientOriginalName();
+            $request->file('image')->move(public_path('storage/certificates'), $fileName);
+            $data['image_path'] = 'certificates/' . $fileName;
         }
         if ($request->hasFile('pdf')) {
-            $data['file_path'] = $request->file('pdf')->store('certificates', 'public');
+            $fileName = uniqid() . '_' . $request->file('pdf')->getClientOriginalName();
+            $request->file('pdf')->move(public_path('storage/certificates'), $fileName);
+            $data['file_path'] = 'certificates/' . $fileName;
         }
         unset($data['image'], $data['pdf']);
 
