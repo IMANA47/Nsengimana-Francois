@@ -7,19 +7,19 @@
     <meta property="og:title" content="Portfolio Full Stack Software Engineer">
     <meta property="og:description" content="Portfolio moderne Laravel orienté business pour clients et recruteurs.">
     <meta property="og:type" content="website">
-    <link rel="shortcut icon" href="{{ asset('asset/logoimana.png') }}" type="image/x-icon">
-    <link rel="icon" href="{{ asset('asset/logoimana.png') }}" type="image/png">
-    <link rel="apple-touch-icon" href="{{ asset('asset/logoimana.png') }}">
+    <link rel="shortcut icon" href="<?php echo e(asset('asset/logoimana.png')); ?>" type="image/x-icon">
+    <link rel="icon" href="<?php echo e(asset('asset/logoimana.png')); ?>" type="image/png">
+    <link rel="apple-touch-icon" href="<?php echo e(asset('asset/logoimana.png')); ?>">
     <title>Imana47</title>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand text-brand fw-bold" href="#home">
-                <img src="{{ asset('asset/logoimana.png') }}" alt="Imana47 Logo" class="me-2" style="height: 40px; width: auto;">
+                <img src="<?php echo e(asset('asset/logoimana.png')); ?>" alt="Imana47 Logo" class="me-2" style="height: 40px; width: auto;">
                 Imana47
             </a>
             <button class="navbar-toggler border-brand" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
@@ -60,7 +60,7 @@
                 <div class="col-lg-4 reveal">
                     <div class="text-center">
                         <div class="bg-brand rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 150px; height: 150px;">
-                            <img src="{{ asset('asset/ImageMe.jpg') }}" alt="Profile Image" srcset="">
+                            <img src="<?php echo e(asset('asset/ImageMe.jpg')); ?>" alt="Profile Image" srcset="">
                         </div>
                     </div>
                 </div>
@@ -68,17 +68,17 @@
         </div>
     </section>
 
-    @include('sections.about')
-    @include('sections.projects')
-    @include('sections.skills')
-    @include('sections.experience')
-    @include('sections.services')
-    @include('sections.testimonials')
-    @include('sections.certificates')
-    @include('sections.contact')
+    <?php echo $__env->make('sections.about', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+    <?php echo $__env->make('sections.projects', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+    <?php echo $__env->make('sections.skills', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+    <?php echo $__env->make('sections.experience', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+    <?php echo $__env->make('sections.services', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+    <?php echo $__env->make('sections.testimonials', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+    <?php echo $__env->make('sections.certificates', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+    <?php echo $__env->make('sections.contact', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
     <!-- AI Chat Component -->
-    @include('components.ai-chat', ['isOpen' => false])
+    <?php echo $__env->make('components.ai-chat', ['isOpen' => false], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
     <!-- WhatsApp Floating Button -->
     <a class="btn btn-success floating-whatsapp" target="_blank" href="https://wa.me/243900000000?text=Bonjour%2C%20je%20suis%20interesse%20par%20vos%20services" aria-label="WhatsApp">
@@ -475,7 +475,7 @@
 </html>
         <i class="bi bi-chat-dots"></i>
     </button>
-    <a class="btn btn-success floating-whatsapp" target="_blank" href="https://wa.me/{{ $profile['whatsapp'] }}?text=Bonjour%2C%20je%20suis%20interesse%20par%20vos%20services" aria-label="WhatsApp">
+    <a class="btn btn-success floating-whatsapp" target="_blank" href="https://wa.me/<?php echo e($profile['whatsapp']); ?>?text=Bonjour%2C%20je%20suis%20interesse%20par%20vos%20services" aria-label="WhatsApp">
         <i class="bi bi-whatsapp"></i>
     </a>
 
@@ -675,3 +675,4 @@
     </style>
 </body>
 </html>
+<?php /**PATH I:\Imana\Project\Imana-47\portfolio\resources\views/home.blade.php ENDPATH**/ ?>

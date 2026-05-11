@@ -1,9 +1,39 @@
-@props([
+<?php $attributes ??= new \Illuminate\View\ComponentAttributeBag;
+
+$__newAttributes = [];
+$__propNames = \Illuminate\View\ComponentAttributeBag::extractPropNames(([
     'isOpen' => false
-])
+]));
+
+foreach ($attributes->all() as $__key => $__value) {
+    if (in_array($__key, $__propNames)) {
+        $$__key = $$__key ?? $__value;
+    } else {
+        $__newAttributes[$__key] = $__value;
+    }
+}
+
+$attributes = new \Illuminate\View\ComponentAttributeBag($__newAttributes);
+
+unset($__propNames);
+unset($__newAttributes);
+
+foreach (array_filter(([
+    'isOpen' => false
+]), 'is_string', ARRAY_FILTER_USE_KEY) as $__key => $__value) {
+    $$__key = $$__key ?? $__value;
+}
+
+$__defined_vars = get_defined_vars();
+
+foreach ($attributes->all() as $__key => $__value) {
+    if (array_key_exists($__key, $__defined_vars)) unset($$__key);
+}
+
+unset($__defined_vars, $__key, $__value); ?>
 
 <!-- AI Chat Component -->
-<div id="aiChatContainer" class="ai-chat-container" {{ $isOpen ? 'style="display: flex;"' : '' }}>
+<div id="aiChatContainer" class="ai-chat-container" <?php echo e($isOpen ? 'style="display: flex;"' : ''); ?>>
     <div class="ai-chat-panel">
         <!-- Header -->
         <div class="ai-chat-header">
@@ -85,7 +115,7 @@
 </div>
 
 <!-- Floating AI Button -->
-<button class="ai-floating-button" id="aiFloatingBtn" {{ $isOpen ? 'style="display: none;"' : '' }}>
+<button class="ai-floating-button" id="aiFloatingBtn" <?php echo e($isOpen ? 'style="display: none;"' : ''); ?>>
     <div class="ai-floating-inner">
         <i class="bi bi-robot"></i>
         <span class="ai-pulse"></span>
@@ -796,3 +826,4 @@ document.addEventListener('DOMContentLoaded', () => {
     new AIChatManager();
 });
 </script>
+<?php /**PATH I:\Imana\Project\Imana-47\portfolio\resources\views/components/ai-chat.blade.php ENDPATH**/ ?>

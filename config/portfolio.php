@@ -3,14 +3,14 @@
 return [
     'seo' => [
         'title' => 'Portfolio Full Stack Software Engineer',
-        'description' => 'Portfolio moderne Laravel orienté business pour clients et recruteurs.',
+        'description' => 'Portfolio moderne Laravel, Django orienté business pour clients et recruteurs.',
     ],
     'profile' => [
         'name' => 'Full Stack Software Engineer',
         'title' => 'Laravel & Modern Web Specialist',
         'tagline' => 'Je conçois des applications web performantes, evolutives et orientees business.',
-        'email' => 'contact@example.com',
-        'whatsapp' => '243900000000',
+        'email' => 'francknsengimana@gmail.com',
+        'whatsapp' => '242069485154',
     ],
     'sections' => [
         ['key' => 'about', 'title' => 'About', 'view' => 'sections.about', 'enabled' => true],
