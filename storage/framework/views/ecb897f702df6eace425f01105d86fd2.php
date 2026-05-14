@@ -42,25 +42,26 @@
 
     <section id="home" class="section-block">
         <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-8 reveal">
-                    <span class="badge bg-brand text-dark mb-3">Full Stack Developer</span>
-                    <h1 class="display-3 fw-bold mb-3">Full Stack Software Engineer</h1>
-                    <p class="text-brand h3 mb-4">Laravel & Modern Web Specialist</p>
-                    <p class="lead text-muted mb-4">I design performant, scalable and business-oriented web applications.</p>
-                    <div class="d-flex gap-3 flex-wrap">
-                        <a class="btn btn-brand" href="#contact">
-                            <i class="bi bi-envelope me-2"></i>Contact Me
-                        </a>
-                        <a class="btn btn-outline-light" href="#projects">
-                            <i class="bi bi-folder me-2"></i>View Projects
-                        </a>
+            <div class="row align-items-center g-4 g-lg-5">
+                <div class="col-lg-7 col-xl-8 reveal">
+                    <div class="hero-content">
+                        <h1 class="display-3 display-md-2 display-xl-1 fw-bold mb-4">Full Stack Developer</h1>
+                        <p class="text-brand h3 h4-md h3-xl mb-4">Laravel & Modern Web Specialist</p>
+                        <p class="lead text-white-50 mb-5 mb-lg-4">I design performant, scalable and business-oriented web applications.</p>
+                        <div class="d-flex flex-column flex-sm-row gap-3 gap-md-4">
+                            <a class="btn btn-brand btn-lg flex-fill flex-sm-auto" href="#contact">
+                                <i class="bi bi-envelope me-2"></i>Contact Me
+                            </a>
+                            <a class="btn btn-outline-light btn-lg flex-fill flex-sm-auto" href="#projects">
+                                <i class="bi bi-folder me-2"></i>View Projects
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 reveal">
-                    <div class="text-center">
-                        <div class="bg-brand rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 150px; height: 150px;">
-                            <img src="<?php echo e(asset('asset/ImageMe.jpg')); ?>" alt="Profile Image" srcset="">
+                <div class="col-lg-5 col-xl-4 reveal">
+                    <div class="hero-image-wrapper text-center">
+                        <div class="hero-profile-circle bg-brand rounded-circle d-inline-flex align-items-center justify-content-center mx-auto">
+                            <img src="<?php echo e(asset('asset/ImageMe.jpg')); ?>" alt="Profile Image" class="hero-profile-img">
                         </div>
                     </div>
                 </div>
